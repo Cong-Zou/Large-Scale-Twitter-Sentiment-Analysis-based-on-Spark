@@ -1,0 +1,30 @@
+#!/bin/bash
+filterTerm="$1"
+base_path="/home/ec2-user/spark/"
+out_base_path=`pwd`
+cd $base_path
+input="$base_path/someFile"
+filteredFile="$base_path/yoloFile"
+sortedFile="$base_path/sortedFile"
+top5Tweets="$out_base_path/top5"
+bottom5Tweets="$out_base_path/bottom5"
+resultFile="$out_base_path/results"
+rm -f $filteredFile
+rm -f $sortedFile
+rm -f $top5Tweets
+rm -f $bottom5Tweets
+rm -f $resultFile
+rm -f $input
+find ./csv_files -type f | grep -iv crc | grep -i csv > $input
+while IFS= read -r line
+do
+ cat "$line" | grep -i "$filterTerm" >> $filteredFile
+done < "$input"
+sort -r -k1 -n -t, $filteredFile > $sortedFile
+cat $sortedFile | head -5 > $top5Tweets
+cat $sortedFile | tail -5 > $bottom5Tweets
+
+overAllSentiment=`awk '{s+=$1}END{print s}' $sortedFile`
+overAllTweets=`cat $sortedFile | wc -l`
+echo "$overAllSentiment" > $resultFile
+echo "$overAllTweets" >> $resultFile

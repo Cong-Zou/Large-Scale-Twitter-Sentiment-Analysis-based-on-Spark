@@ -1,0 +1,131 @@
+
+<main role="main">
+
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1>Welcome to twitter Sentiment Analysis !</h1>
+      <p class="lead text-muted">Enter your search term below </p>
+
+
+      <div class="input-group mb-3">
+
+<div class="input-group mb-3">
+  <input id = "search_query" type="text" class="form-control" placeholder="Enter Search Query" aria-label="Enter Search Query" aria-describedby="button-addon2">
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary" type="button" id="button-search">Search</button>
+  </div>
+</div>
+
+</div>
+
+
+
+
+
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+<div class="row" id="final_sentiment" style="display:none">
+<div class="col-md-12">
+
+<svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect width="100%" height="100%" fill="#638e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Sentiment Score :</text></svg>
+
+</div>
+
+</div>
+
+
+<div class="row" id="loading_area" style="display:none">
+
+</div>
+
+
+      <div class="row">
+<div class="row" id = "output" style="display:none">
+</br></br>
+<div class="col-md-8" id="output_tweets">
+
+<div class="card text-white bg-success mb-12" style="">
+  <div class="card-header">Header</div>
+  <div class="card-body">
+    <h5 class="card-title">Success card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+<div class="card text-white bg-danger mb-12" style="">
+  <div class="card-header">Header</div>
+  <div class="card-body">
+    <h5 class="card-title">Danger card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+
+<div class="card text-white bg-info mb-12" style="">
+  <div class="card-header">Header</div>
+  <div class="card-body">
+    <h5 class="card-title">Danger card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+<div class="col-md-4">
+
+
+
+
+<div class="card text-primary bg-light mb-12" style="">
+  <div class="card-header"><h5 class="card-title"><strong>Top Trending tweets !</strong></h5></div>
+  <div class="card-body">
+<div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">List group item heading</h5>
+      <small>3 days ago</small>
+    </div>
+    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+    <small>Donec id elit non mi porta.</small>
+  </a>
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">List group item heading</h5>
+      <small class="text-muted">3 days ago</small>
+    </div>
+    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+    <small class="text-muted">Donec id elit non mi porta.</small>
+  </a>
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">List group item heading</h5>
+      <small class="text-muted">3 days ago</small>
+    </div>
+    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+    <small class="text-muted">Donec id elit non mi porta.</small>
+  </a>
+</div>
+  </div>
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+</main>
+
